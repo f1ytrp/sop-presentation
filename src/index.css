@@ -175,7 +175,7 @@ body { font-family: var(--font-body); font-weight: 400; color: var(--high-contra
 .comparison-card { background: rgba(17, 70, 67, 0.30); border: 1px solid rgba(162, 181, 104, 0.12); border-radius: var(--radius-sm); padding: 20px 22px; transition: border-color var(--duration-element) var(--ease-out), transform var(--duration-element) var(--ease-out); }
 .comparison-card:hover { border-color: rgba(6, 129, 118, 0.35); transform: translateY(-2px); }
 .comparison-card__title { font-family: var(--font-title); font-weight: 700; font-size: 1.05rem; color: var(--secondary-accent); margin-bottom: 10px; }
-.comparison-card__body { font-size: 0.9rem; line-height: 1.6; opacity: 0.88; }
+.comparison-card__body { font-size: 0.9rem; line-height: 1.6; opacity: 0.88; white-space: pre-wrap; }
 
 /* ---- Flow Chain ---- */
 .flow-chain { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; justify-content: center; padding: 16px 0; }

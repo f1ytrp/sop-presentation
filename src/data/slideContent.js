@@ -17,8 +17,8 @@ const slides = [
     sectionTag: 'Seminar Presentation',
     title: 'From Genomic Dark Matter to Evolutionary Innovation',
     subtitle: 'Role of Non-coding DNA in Evolution',
-    meta: 'Non-coding DNA · Gene Regulation · Phenotypic Diversity · Evolutionary Change',
-    diagram: { type: 'inline', label: 'Insert title artwork — DNA helix, root system, or branching genome visual', imageUrl: '/assets/title_artwork.png' },
+    meta: 'Aaditya Nair · Muskan Vikas Bhagotra | Molecular Biology & Genomics',
+    diagram: { type: 'inline', label: 'Title Artwork: DNA Helix', imageUrl: '/assets/title_artwork.png' },
   },
 
   /* ===== 2. Why This Topic Matters — SPOTLIGHT ===== */
@@ -26,10 +26,10 @@ const slides = [
     id: 'why-it-matters',
     layout: 'spotlight',
     sectionTag: 'Introduction',
-    statement: 'Only ~1.5% of the human genome encodes proteins — yet the rest is far from junk.',
-    support: 'Non-coding DNA contains the regulatory information that controls gene activity across time and tissue. Its importance becomes clear when we ask how complex organisms arise from similar protein-coding gene sets. The central question is not just what genes exist, but how their expression is controlled.',
-    callout: { icon: '🧬', text: 'This large non-coding portion was once dismissed as "junk," but that view is now outdated.' },
-    diagram: { type: 'strip', label: 'Insert genome composition graphic — coding vs non-coding proportions', imageUrl: '/assets/genome_composition.png' },
+    statement: '98% of the human genome is non-coding DNA — once dismissed as "junk," now understood as the control architecture of life.',
+    support: 'Non-coding DNA contains the regulatory information that controls gene activity across time and tissue. According to ENCODE, ~80% of the genome shows biochemical activity. The central question is not just what genes exist, but how their expression is controlled.',
+    callout: { icon: '🧬', text: 'Small regulatory shifts in non-coding DNA drive large phenotypic effects and evolutionary innovation.' },
+    diagram: { type: 'strip', label: 'Genome Composition: Coding vs Non-coding', imageUrl: '/assets/genome_composition.png' },
   },
 
   /* ===== 3. What Is Non-coding DNA? — FEATURE GRID ===== */
@@ -58,11 +58,11 @@ const slides = [
     subtitle: 'Genome size alone does not explain complexity; regulatory architecture matters more.',
     stats: [
       { value: '~1.5%', label: 'Protein-coding DNA' },
+      { value: '~26%', label: 'Introns & UTRs' },
       { value: '~45%', label: 'Transposable elements' },
-      { value: '~98%', label: 'Non-coding fraction' },
-      { value: '20k', label: 'Protein-coding genes' },
+      { value: '~15%', label: 'Regulatory Elements' },
     ],
-    note: 'The human genome is large partly because it must encode control logic, not only proteins. The non-coding fraction carries instructions for regulatory control, chromatin organization, and transcriptional timing.',
+    note: '"What was once called \'Junk DNA\' is now the control center of life." The non-coding fraction carries instructions for regulatory control, chromatin organization, and transcriptional timing.',
   },
 
   /* ===== 5. Thesis — FLOW ===== */
@@ -72,13 +72,13 @@ const slides = [
     sectionTag: 'Central Thesis',
     title: 'The Big Idea',
     bullets: [
-      'Evolution is not only changes in proteins.',
-      'Changes in regulation are often more important than changes in coding sequence.',
-      'Non-coding DNA drives phenotypic diversity by altering gene expression programs.',
-      'Regulatory mutation creates evolutionary innovation while preserving core protein function.',
-      'This is why non-coding DNA is central to modern evolutionary biology.',
+      'Evolution is not only changes in proteins — regulatory change is a primary source of evolutionary innovation.',
+      'Non-coding mutations drive phenotypic diversity by altering gene expression programs while avoiding damage to core protein function.',
+      'The regulatory layer defines cell identity and enables complex multicellular development.',
+      'Old networks are rewired for new functions, driving speciation and adaptation.',
+      'Regulatory mutations underlie human disease, making the non-coding genome the next frontier of medicine.',
     ],
-    flowNodes: ['Non-coding DNA', 'Gene Regulation', 'Developmental Programs', 'Phenotype', 'Evolution'],
+    flowNodes: ['Non-coding DNA', 'Gene Regulation', 'Phenotypic Diversity', 'Evolutionary Innovation'],
   },
 
   /* ===== 6. Regulatory Toolkit — SECTION ===== */
@@ -97,13 +97,13 @@ const slides = [
     sectionTag: 'Promoters',
     title: 'Promoters — The Starting Point of Transcription',
     bullets: [
-      'Promoters are upstream DNA regions that recruit RNA polymerase and transcription factors.',
-      'They define where transcription begins and help orient the transcription machinery correctly.',
-      'Promoters do not make protein themselves; they determine whether the nearby gene is read at all.',
-      'Their sequence composition affects strength, precision, and responsiveness to signals.',
-      'In this sense, promoters act as active control hubs rather than passive landing pads.',
+      'Promoters are upstream DNA regions that act as docking sites for RNA Polymerase II and General Transcription Factors (GTFs).',
+      'They define where transcription begins and orient the machinery correctly.',
+      'Not a passive on-switch — they actively integrate signals from multiple enhancers simultaneously via chromatin looping.',
+      'They control transcription bursting, pausing, and overall efficiency.',
+      'Promoter architecture encodes regulatory logic that defines complete developmental programs.',
     ],
-    diagram: { type: 'right', label: 'Insert gene track with promoter region highlighted', imageUrl: '/assets/promoter_schematic.png' },
+    diagram: { type: 'right', label: 'Promoter Schematic & Pre-Initiation Complex', imageUrl: '/assets/promoter_schematic.png' },
   },
 
   /* ===== 8. Core Promoter Architecture — STEPS ===== */
@@ -113,11 +113,11 @@ const slides = [
     sectionTag: 'Promoters',
     title: 'Core Promoter Architecture',
     steps: [
-      'The core promoter lies close to the transcription start site (TSS).',
-      'It contains motifs such as the TATA box, Initiator (Inr), and DPE.',
-      'These motifs help organize transcription factor binding and pre-initiation complex assembly.',
-      'Small motif changes can shift promoter strength, timing, and start-site precision.',
-      'Promoter architecture is therefore encoded in sequence, not just in general "location."',
+      'The TATA-box (–31 to –24 bp) binds TBP (TFIID) to orient the Pre-Initiation Complex (PIC) and facilitate DNA melting.',
+      'The Initiator (Inr) motif (–3 to +3 bp) marks the Transcription Start Site (TSS) for a precise start point.',
+      'The DPE motif (+28 to +33 bp) controls developmental gene expression (e.g., Hox gene patterning).',
+      'The TCT Motif (–2 to +6 bp) is a specialized element dedicated to ribosomal protein gene regulation.',
+      'Small sequence changes in these motifs can profoundly alter timing, strength, and tissue-specificity of gene expression.',
     ],
   },
 
@@ -128,9 +128,9 @@ const slides = [
     sectionTag: 'Promoters',
     title: 'Types of Promoters',
     cards: [
-      { title: 'Constitutive', body: 'Active in many tissues and at many times. They maintain steady expression when constant output is needed.' },
-      { title: 'Tissue-specific', body: 'Active only in selected tissues. They provide spatial precision and reduce unwanted expression elsewhere.' },
-      { title: 'Inducible', body: 'Turn on only in response to a signal. They provide temporal control and flexible environmental responsiveness.' },
+      { title: 'Constitutive', body: 'Active in many tissues; maintain steady expression.\n\n• Active across virtually all tissue types.\n• Drive continuous, high-level gene expression.\n• Often associated with housekeeping genes.\n• Use dispersed architecture with CpG islands.\n\nExamples: CaMV 35S (plant), CMV (mammalian)' },
+      { title: 'Tissue-specific', body: 'Active only in selected tissues for spatial precision.\n\n• Activator-driven: limited TFs activate gene (e.g., liver HNF4α).\n• Repressor-driven: local repressors silence broad activators (e.g., NRSE).\n• Epigenetic Control: DNA methylation locks silent states.\n\nExample: MaEXPA1 (banana fruit-specific)' },
+      { title: 'Inducible', body: 'Turn on only in response to a signal for temporal control.\n\n• Chemical: Tet-ON/OFF, Steroids.\n• Environmental: Heat-shock (hsp70), Pathogen/wound-response.\n• Optogenetic: Toggle via light (660 nm), non-invasive.\n\nAdvantage: Absolute temporal control like a motion-sensor light.' },
     ],
   },
 
@@ -141,13 +141,13 @@ const slides = [
     sectionTag: 'Promoters',
     title: 'Focused vs Dispersed Promoters',
     bullets: [
-      'Focused promoters have a single sharp transcription start site.',
-      'Dispersed promoters spread initiation over a broader region.',
-      'Focused promoters are common in tightly controlled developmental genes.',
-      'Dispersed promoters are common in housekeeping genes that need steady output.',
-      'Promoter architecture is matched to biological role.',
+      'Focused (Sharp) promoters have a single, well-defined transcription start site.',
+      'They contain fixed-position motifs (TATA, DPE) with strict spacing, typical for tightly regulated developmental genes.',
+      'Dispersed (Broad) promoters initiate transcription over a 50–100 bp region and lack rigid sequence motifs.',
+      'Dispersed promoters are common in housekeeping genes requiring steady output and often overlap with CpG islands.',
+      'Vertebrate genomes heavily feature dispersed promoters to provide flexible initiation platforms.',
     ],
-    diagram: { type: 'right', label: 'Insert side-by-side promoter start site comparison', imageUrl: '/assets/promoter_variants.png' },
+    diagram: { type: 'right', label: 'Focused vs Dispersed Promoters', imageUrl: '/assets/promoter_variants.png' },
   },
 
   /* ===== 11. Divergent Transcription — SPOTLIGHT ===== */
@@ -156,8 +156,8 @@ const slides = [
     layout: 'spotlight',
     sectionTag: 'Promoters',
     statement: 'Many promoters fire in both directions — revealing hidden complexity in transcription initiation.',
-    support: 'Promoters orient transcription in the correct direction, but many also initiate a reverse transcript that is usually short and unstable. This "noise" is not meaningless; it shows that transcription initiation is broader than the final mRNA output.',
-    callout: { icon: '↔', text: 'Divergent transcription adds hidden complexity to promoter logic and non-coding regulation.' },
+    support: 'Promoters orient transcription in the correct direction, but many also initiate a reverse transcript (Upstream Antisense RNAs / uaRNAs) that is usually short and rapidly degraded by the nuclear exosome. This proves the default ground state of open chromatin is bidirectional initiation.',
+    callout: { icon: '↔', text: 'The promoter\'s primary job is stabilizing the correct direction over background noise.' },
   },
 
   /* ===== 12. Enhancers — SECTION ===== */
@@ -176,13 +176,13 @@ const slides = [
     sectionTag: 'Enhancers',
     title: 'Enhancers — Long-range Regulators',
     bullets: [
-      'Enhancers increase transcription from positions that may be far away from the gene they control.',
-      'They work independently of orientation, so the same regulatory sequence can function in either direction.',
-      'Enhancers are major controllers of tissue specificity and developmental precision.',
-      'They act through chromatin looping that brings distal DNA into contact with promoters.',
-      'Transcription factors and the Mediator complex help stabilize this long-range communication.',
+      'Short non-coding DNA sequences (~200–500 bp) that act as "volume knobs" for gene expression output.',
+      'Act independently of orientation and can function over hundreds of kilobases away.',
+      'Pioneer factors (e.g., FoxA1) first open compacted chromatin at the enhancer.',
+      'They act through 3D chromatin looping that brings the distal DNA into contact with target promoters.',
+      'Transcription factors, Cohesin, and the Mediator complex stabilize this loop and recruit RNA Pol II.',
     ],
-    diagram: { type: 'right', label: 'Insert enhancer-promoter looping diagram', imageUrl: '/assets/enhancer_looping.png' },
+    diagram: { type: 'right', label: 'Enhancer-Promoter Looping', imageUrl: '/assets/enhancer_looping.png' },
   },
 
   /* ===== 14. Enhancer Types — COMPARISON ===== */
@@ -192,10 +192,10 @@ const slides = [
     sectionTag: 'Enhancers',
     title: 'Types of Enhancers',
     cards: [
-      { title: 'Typical Enhancers', body: 'Standard regulatory elements, often 200–500 bp long. They support cell-specific control and localized activation.' },
-      { title: 'Super-enhancers', body: 'Dense enhancer clusters that drive exceptionally high expression of cell identity genes and developmental regulators.' },
-      { title: 'Poised Enhancers', body: 'Primed but inactive regions in stem cells. They are ready to respond quickly when differentiation begins.' },
-      { title: 'eRNA-associated', body: 'Active enhancers can transcribe short non-coding RNAs. These transcripts mark enhancer activity and state.' },
+      { title: 'Typical Enhancers', body: 'Standard regulatory elements, typically ~200–500 bp long.\n\n• Support cell-specific gene regulation.\n• Form a single TF cluster contact with target promoter.\n• Example: Alpha-globin enhancer (RBC-specific hemoglobin).' },
+      { title: 'Super-enhancers', body: 'Large clusters of typical enhancers spanning tens of kilobases.\n\n• Densely occupied by TFs.\n• Drive exceptionally high expression of cell identity genes (e.g., Oct4).\n• Often hijacked by cancer cells to drive oncogenes.' },
+      { title: 'Poised Enhancers', body: 'Epigenetically primed before activation in stem cells.\n\n• Carry H3K4me1 (permissive) but lack H3K27ac (active).\n• Ready to respond when signals trigger TF recruitment.\n• Decommissioned by LSD1-NuRD complex upon cell exit.' },
+      { title: 'eRNA Transcripts', body: 'Short, unstable, non-polyadenylated RNAs from active enhancers.\n\n• Indicate that enhancers actively recruit Pol II.\n• Their presence is a gold standard marker of enhancer activity.\n• eRNA transcription mirrors the looping state.' },
     ],
   },
 
@@ -206,10 +206,10 @@ const slides = [
     sectionTag: 'Enhancers',
     title: 'Enhancer-Promoter Compatibility',
     items: [
-      { icon: '✓', title: 'Selective Pairing', body: 'Not every enhancer activates every promoter. Promoter sequence and architecture influence enhancer response.' },
-      { icon: '🎯', title: 'Regulatory Specificity', body: 'This compatibility creates specificity and avoids random activation across the genome.' },
-      { icon: '🔬', title: 'Context Dependence', body: 'The same enhancer can behave differently in different genomic contexts, making regulation modular.' },
-      { icon: '🧩', title: 'Precision', body: 'Regulatory compatibility is one reason gene control can be precise, tissue-specific, and developmentally timed.' },
+      { icon: '✓', title: 'Selective Pairing', body: 'Enhancers do NOT activate all promoters equally. Promoter sequence and architecture determine which enhancers it will respond to.' },
+      { icon: '🎯', title: 'TATA-Specific Enhancers', body: 'Prefer promoters with a canonical TATA box sequence and are often incompatible with DPE-containing promoters.' },
+      { icon: '🔬', title: 'DPE-Specific Enhancers', body: 'Prefer promoters with the Downstream Promoter Element (DPE). Important in developmental patterning, such as Drosophila Hox gene expression.' },
+      { icon: '🧩', title: 'Precision', body: 'This selective compatibility creates transcriptional precision, explaining why different genes respond to different enhancers even in the same cell.' },
     ],
   },
 
@@ -229,12 +229,13 @@ const slides = [
     sectionTag: 'Silencers',
     title: 'Silencers — Negative Regulation',
     bullets: [
-      'Silencers reduce transcription by recruiting repressor proteins.',
-      'They can compact chromatin and make DNA less accessible to transcription machinery.',
-      'They help keep inappropriate genes off in the wrong tissue or developmental stage.',
-      'Silencers balance enhancer activity and preserve proper expression levels.',
+      'Silencers are regulatory DNA sequences that reduce or repress transcription.',
+      'They physically block RNA Polymerase or recruit sequence-specific repressor proteins.',
+      'They recruit Histone Deacetylases (HDACs) or Polycomb Repressive Complexes (PRC1/2) to compact chromatin.',
+      'They ensure tissue-specific silencing of inappropriate genes and maintain boundaries of silent chromatin.',
+      'Defects in silencer elements are linked to severe developmental disorders and cancer.',
     ],
-    diagram: { type: 'right', label: 'Insert repressor binding to DNA schematic', imageUrl: '/assets/silencers_repressor.png' },
+    diagram: { type: 'right', label: 'Silencer Repression Complex', imageUrl: '/assets/silencers_repressor.png' },
   },
 
   /* ===== 18. Insulators — TWO-COL ===== */
@@ -245,13 +246,13 @@ const slides = [
     title: 'Insulators — Boundary Control',
     gridVariant: 'wide-left',
     bullets: [
-      'Insulators create regulatory boundaries between genomic domains.',
-      'They prevent wrong enhancer–promoter interactions and protect gene specificity.',
-      'They can also block the spread of heterochromatin into active regions.',
-      'CTCF is a major insulator-binding protein involved in this boundary system.',
-      'Insulators help preserve genome organization and regulatory fidelity.',
+      'Insulators organize the 3D genome into Topologically Associating Domains (TADs).',
+      'Enhancer-Blocking Activity: Prevent an enhancer from activating the wrong promoter when positioned between them.',
+      'Barrier Activity: Stop the spread of silencing marks (heterochromatin) into active chromatin regions.',
+      'CTCF and Cohesin are the primary vertebrate proteins that bind and stabilize these loop boundaries.',
+      'Disruption of CTCF sites breaks TAD boundaries, frequently causing limb malformations and cancer.',
     ],
-    diagram: { type: 'right', label: 'Insert CTCF boundary / domain separation schematic', imageUrl: '/assets/insulators_ctcf.png' },
+    diagram: { type: 'right', label: 'CTCF Boundaries & TADs', imageUrl: '/assets/insulators_ctcf.png' },
   },
 
   /* ===== 19. ncRNAs — SECTION ===== */
@@ -269,8 +270,8 @@ const slides = [
     layout: 'spotlight',
     sectionTag: 'ncRNAs',
     statement: 'RNA is not only a messenger — it can itself be a regulator of gene expression.',
-    support: 'ncRNAs fine-tune expression at transcriptional and post-transcriptional levels. They add flexibility, specificity, and additional control layers to the genome. Different ncRNA classes act through different mechanisms, but all contribute to regulation.',
-    diagram: { type: 'full', label: 'Insert RNA regulatory network or layered control diagram', imageUrl: '/assets/ncrna_network.png' },
+    support: 'ncRNAs fine-tune expression at transcriptional and post-transcriptional levels. They range from highly conserved small RNAs (miRNA) to less conserved long RNAs (lncRNA) with complex 3D structures. Different ncRNA classes act through different mechanisms to add flexibility, specificity, and layered control to the genome.',
+    diagram: { type: 'full', label: 'ncRNA Regulatory Network', imageUrl: '/assets/ncrna_network.png' },
   },
 
   /* ===== 21. ncRNA Classes — COMPARISON ===== */
@@ -280,10 +281,10 @@ const slides = [
     sectionTag: 'ncRNAs',
     title: 'Classes of Non-coding RNAs',
     cards: [
-      { title: 'MicroRNAs', body: 'Small RNAs that bind target mRNAs. They reduce translation or promote degradation and can influence many genes at once.' },
-      { title: 'Long ncRNAs', body: 'Longer than 200 nt. They can act as scaffolds, guides, or decoys and often recruit chromatin modifiers.' },
-      { title: 'Circular RNAs', body: 'Stable closed loops that can sponge miRNAs. They add another layer of post-transcriptional control.' },
-      { title: 'siRNAs & piRNAs', body: 'Small silencing RNAs that help suppress transposons and protect genome stability, especially in germ cells.' },
+      { title: 'MicroRNAs (miRNA)', body: 'Small (~22nt) RNAs processed by Dicer/Drosha. The guide strand in RISC scans mRNA 3′ UTRs to trigger cleavage or translational repression. One miRNA can regulate hundreds of genes.' },
+      { title: 'Long ncRNAs (lncRNA)', body: 'Transcripts >200 nt with complex 3D structures. They act as scaffolds (e.g., assembling chromatin modifiers like HOTAIR), guides (XIST), or decoys to sequester TFs.' },
+      { title: 'Circular RNAs (circRNA)', body: 'Form covalently closed loops via back-splicing. Exceptionally stable (no free ends). Act as miRNA "sponges" to sequester miRNAs and prevent target silencing.' },
+      { title: 'siRNAs & piRNAs', body: 'Small silencing RNAs that form the genome\'s immune system. piRNAs work with PIWI proteins to suppress transposon expression and protect germline stability.' },
     ],
   },
 
@@ -292,12 +293,12 @@ const slides = [
     id: 'ncrna-evolution',
     layout: 'stacked',
     sectionTag: 'ncRNAs',
-    title: 'ncRNAs and Evolution',
+    title: 'ncRNAs and Evolutionary Adaptation',
     items: [
-      { icon: '🔄', title: 'Network Rewiring', body: 'ncRNAs can rewire regulatory networks without changing protein sequences.' },
-      { icon: '🎛', title: 'Subtle Tuning', body: 'They allow subtle tuning that is useful for evolutionary adaptation.' },
-      { icon: '🌱', title: 'Flexible Control', body: 'They support flexible gene control across developmental contexts and environmental conditions.' },
-      { icon: '💡', title: 'Evolutionary Innovation', body: 'Because they are modular and diverse, they are an important part of evolutionary innovation.' },
+      { icon: '🔄', title: 'Network Rewiring', body: 'ncRNAs rapidly rewire gene regulatory networks without altering protein-coding sequences, enabling systemic phenotypic change.' },
+      { icon: '🎛', title: 'Master Tuners', body: 'A single new miRNA can shift the expression of hundreds of target genes, creating a large effect with a small genomic footprint.' },
+      { icon: '🌱', title: 'Rapid Evolution', body: 'lncRNAs evolve faster than protein-coding genes, allowing regulatory innovation to accumulate rapidly in a lineage.' },
+      { icon: '💡', title: 'Fine-grained Control', body: 'ncRNA-based regulation tunes expression levels rather than strictly switching genes on or off, providing fine-grained adaptive control.' },
     ],
   },
 
@@ -317,13 +318,13 @@ const slides = [
     sectionTag: 'Transposable Elements',
     title: 'Transposable Elements — Jumping Genes',
     bullets: [
-      'Transposable elements are DNA sequences that can move within the genome.',
-      'Retrotransposons use an RNA intermediate and move by copy-and-paste.',
-      'DNA transposons move more directly by cut-and-paste mechanisms.',
-      'They make up a large fraction of the genome and create sequence variation.',
-      'Their mobility makes them powerful agents of genomic change.',
+      'Transposable elements (TEs) are DNA sequences that move within the genome, comprising ~45% of human DNA.',
+      'Class I (Retrotransposons): Move via copy-and-paste using an RNA intermediate (e.g., LINE-1, primate-specific Alu elements).',
+      'Class II (DNA Transposons): Move via cut-and-paste using transposase enzymes.',
+      'Historically dismissed as "jumping genes," they are now recognized as obligate genomic symbionts.',
+      'They carry regulatory sequences and distribute transcription factor binding sites across the genome.',
     ],
-    diagram: { type: 'right', label: 'Insert mobile DNA element movement diagram', imageUrl: '/assets/mobile_dna.png' },
+    diagram: { type: 'right', label: 'Mobile DNA Elements', imageUrl: '/assets/mobile_dna.png' },
   },
 
   /* ===== 25. Evolutionary Role of TEs — STEPS ===== */
@@ -333,11 +334,11 @@ const slides = [
     sectionTag: 'Transposable Elements',
     title: 'Evolutionary Role of Transposable Elements',
     steps: [
-      'Transposable elements can create new regulatory sites when they insert near genes.',
-      'They can reshape transcription networks by distributing motifs across the genome.',
-      'They contribute to genome innovation rather than acting only as parasites.',
-      'They add raw material for evolutionary experimentation and regulatory rewiring.',
-      'Silencing systems, including piRNAs, help keep their activity under control.',
+      'TEs carry TF binding sites that create new promoters or enhancers upon insertion (~25% of human TF sites derive from TEs).',
+      'En masse TE insertions can rapidly rewire transcription networks, co-regulating groups of genes simultaneously.',
+      'Species-specific TE expansions contribute heavily to lineage-specific regulatory novelty.',
+      'TEs contribute to exon shuffling and occasionally donate functional genes (e.g., Syncytin for placenta development).',
+      'The host genome controls TEs via epigenetics (piRNAs, methylation); failure of this control leads to instability.',
     ],
   },
 
@@ -354,7 +355,7 @@ const slides = [
       'Some can act as regulatory RNAs and influence their parent genes.',
       'They are genomic fossils that can still participate in regulation.',
     ],
-    diagram: { type: 'right', label: 'Insert pseudogene-to-parent gene regulatory schematic', imageUrl: '/assets/pseudogene_regulation.png' },
+    diagram: { type: 'right', label: 'Pseudogene Regulation', imageUrl: '/assets/pseudogene_regulation.png' },
   },
 
   /* ===== 27. 3D Genome & Epigenetics — SECTION ===== */
@@ -373,11 +374,11 @@ const slides = [
     sectionTag: 'Epigenetics',
     title: 'Epigenetic Memory',
     items: [
-      { icon: '🔒', title: 'Chromatin Marks', body: 'Cells remember their identity through stable chromatin marks.' },
-      { icon: '🧪', title: 'DNA Methylation', body: 'DNA methylation and histone modifications help maintain tissue-specific expression.' },
-      { icon: '🔁', title: 'Heritable State', body: 'This memory supports stable development and differentiation across cell divisions.' },
-      { icon: '🧠', title: 'Memory Layer', body: 'Epigenetic regulation gives the genome a memory-like layer of control.' },
-      { icon: '🤝', title: 'Cooperation', body: 'It works alongside non-coding regulatory DNA rather than replacing it.' },
+      { icon: '🔒', title: 'Chromatin Marks', body: 'Cells remember their identity through stable modifications like H3K27ac (active) and H3K27me3 (Polycomb silencing).' },
+      { icon: '🧪', title: 'DNA Methylation', body: 'Adding a methyl group to cytosine (5mC) typically represses transcription, maintained through cell division by DNMT1.' },
+      { icon: '🔁', title: 'Cellular Memory', body: 'Epigenetic marks allow cells to remember their lineage identity through division, providing robustness to development.' },
+      { icon: '🧠', title: 'Bivalency', body: 'In stem cells, bivalent promoters carry both active (H3K4me3) and repressive marks, keeping genes poised for rapid activation.' },
+      { icon: '🤝', title: 'Integration', body: 'Epigenetics works alongside non-coding regulatory DNA to lock in the proper enhancer-promoter communication networks.' },
     ],
   },
 
@@ -388,10 +389,10 @@ const slides = [
     sectionTag: 'Development',
     title: 'Development and Differentiation',
     stages: [
-      { icon: '🟢', label: 'Stem Cell', desc: 'Open, flexible chromatin with broad developmental potential' },
-      { icon: '🔀', label: 'Commitment', desc: 'Lineage-specific enhancers begin to activate' },
-      { icon: '🔷', label: 'Differentiation', desc: 'Regulatory programs progressively narrow cell fate' },
-      { icon: '🔶', label: 'Mature Tissue', desc: 'Stable regulatory programs preserve cell identity' },
+      { icon: '🟢', label: 'Stem Cell', desc: 'Open, flexible chromatin with poised enhancers (H3K4me1) and pluripotency TFs (OCT4/SOX2)' },
+      { icon: '🔀', label: 'Commitment', desc: 'Lineage-specific TFs activate; specific enhancers gain H3K27ac while stem enhancers are decommissioned' },
+      { icon: '🔷', label: 'Organogenesis', desc: 'Stable enhancer-promoter contacts established within TAD boundaries; cell fate narrows' },
+      { icon: '🔶', label: 'Mature Tissue', desc: 'Highly efficient, specific gene expression programs are locked in by stable epigenetic memory' },
     ],
   },
 
@@ -420,13 +421,13 @@ const slides = [
     sectionTag: 'Evolution',
     title: 'Conservation versus Variation',
     bullets: [
-      'Some non-coding sequences are highly conserved across species because they are essential for function.',
-      'Others evolve more quickly and provide opportunities for adaptive change.',
-      'Conservation signals regulatory constraint and biological importance.',
-      'Variation provides the raw material for evolutionary novelty.',
-      'Evolution needs both stability and change.',
+      'Ultraconserved Elements (UCEs) are identical across species (e.g., human to zebrafish), signaling extreme functional constraint.',
+      'Conversely, many regulatory enhancers evolve rapidly and provide the substrate for evolutionary innovation.',
+      'Species-specific TE insertions create novel enhancers unique to a lineage, driving divergence.',
+      'Variation in regulatory sequences explains much of the phenotypic diversity between closely related species.',
+      'The regulatory non-coding genome evolves much faster than the protein-coding genome.',
     ],
-    diagram: { type: 'right', label: 'Insert conserved vs variable sequence comparison', imageUrl: '/assets/conservation_variation.png' },
+    diagram: { type: 'right', label: 'Sequence Conservation vs Variation', imageUrl: '/assets/conservation_variation.png' },
   },
 
   /* ===== 33. Why ncDNA Matters — SPOTLIGHT ===== */
@@ -446,12 +447,12 @@ const slides = [
     sectionTag: 'Evolution',
     title: 'Regulatory Rewiring',
     bullets: [
-      'New regulatory interactions can emerge through mutation, duplication, and transposition.',
-      'Old networks can be modified without destroying protein function.',
-      'This changes developmental timing, spatial control, and tissue specificity.',
-      'Evolution works by rewiring gene control rather than only inventing new genes.',
+      'Humans and chimps differ <2% in protein sequence; regulatory divergence explains our morphological differences.',
+      'New enhancer-promoter contacts wire genes into new regulatory modules, altering when and where genes activate.',
+      'Small non-coding mutations can shift developmental timing (heterochrony) with dramatic phenotypic effects.',
+      'Regulatory mutations tune expression without disrupting the core protein machinery, making them highly "evolvable."',
     ],
-    diagram: { type: 'right', label: 'Insert network rewiring — before/after interaction map', imageUrl: '/assets/regulatory_rewiring.png' },
+    diagram: { type: 'right', label: 'Network Rewiring Map', imageUrl: '/assets/regulatory_rewiring.png' },
   },
 
   /* ===== 35. ENCODE — STATS ===== */
@@ -476,10 +477,10 @@ const slides = [
     sectionTag: 'Disease',
     title: 'Disease Relevance',
     items: [
-      { icon: '⚠', title: 'Regulatory Mutations', body: 'Mutations in non-coding DNA can cause disease by disrupting regulation rather than protein structure.' },
-      { icon: '🔬', title: 'Cancer & Development', body: 'Cancer and developmental disorders are strongly linked to regulatory defects.' },
-      { icon: '📊', title: 'GWAS Variants', body: 'Many disease-associated variants from genetic studies fall in non-coding regions.' },
-      { icon: '🔄', title: 'Evolutionary Link', body: 'The same mechanisms that support evolution can be misregulated in disease.' },
+      { icon: '⚠', title: 'Regulatory Mutations', body: 'Mutations in non-coding DNA disrupt regulation. For example, TERT promoter mutations are the most common non-coding cancer mutations.' },
+      { icon: '🔬', title: 'Cancer & Development', body: 'Cancer cells hijack super-enhancers to drive oncogene expression, while TAD boundary disruptions cause developmental malformations.' },
+      { icon: '📊', title: 'GWAS Variants', body: '>90% of GWAS-identified disease-associated SNPs fall in non-coding regions, affecting enhancers, promoters, and insulators.' },
+      { icon: '💊', title: 'Therapeutic Targets', body: 'CRISPR editing of non-coding elements (e.g., the BCL11A enhancer for sickle cell disease) is a revolutionary frontier in precision medicine.' },
     ],
   },
 
@@ -506,11 +507,11 @@ const slides = [
     title: 'Conclusion',
     bullets: [
       'Non-coding DNA is not junk — it is the regulatory architecture of the genome.',
-      'It drives complexity, development, and evolutionary innovation.',
-      'It is essential for modern genomics and medicine.',
-      'Understanding it is central to understanding life itself.',
+      'Promoters, enhancers, silencers, and insulators form an integrated toolkit for gene expression.',
+      'ncRNAs and transposable elements add dynamic regulatory innovation.',
+      'Regulatory change drives phenotypic diversity and evolutionary adaptation.',
     ],
-    diagram: { type: 'full', label: 'Insert final thematic artwork — genome-tree / root system / evolutionary branch', imageUrl: '/assets/conclusion_artwork.png' },
+    diagram: { type: 'full', label: 'Evolutionary Branch Artwork', imageUrl: '/assets/conclusion_artwork.png' },
   },
 
   /* ===== 39. Thank You ===== */
