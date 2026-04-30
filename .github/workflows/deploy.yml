@@ -2,23 +2,15 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: ["main", "master"] # Trigger on pushes to the main/master branch
-  workflow_dispatch: # Allow manual trigger
+    branches: ["main", "master"]
+  workflow_dispatch:
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-# Allow only one concurrent deployment
-concurrency:
-  group: "pages"
-  cancel-in-progress: true
+  contents: write
 
 jobs:
-  build:
-    name: Build
+  build-and-deploy:
+    name: Build & Deploy
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -30,37 +22,14 @@ jobs:
           node-version: 20
           cache: 'npm'
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
-        with:
-          enablement: true
-
       - name: Install dependencies
         run: npm ci
 
       - name: Build the project
         run: npm run build
-        # If your repository name is not the same as your username (i.e. it's a project page),
-        # Vite requires a base path matching the repo name. 
-        # Example: if repo is https://github.com/flytrap/sop-presentation, base should be /sop-presentation/
-        # You may need to uncomment and set the line below if you aren't using a custom domain or user page.
-        # env:
-        #   VITE_BASE_PATH: /sop-presentation/ 
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+      - name: Deploy to gh-pages branch
+        uses: peaceiris/actions-gh-pages@v4
         with:
-          # Vite outputs the build to the 'dist' directory by default
-          path: './dist'
-
-  deploy:
-    name: Deploy
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
