@@ -22,21 +22,23 @@ const placeholderIcon = (
   </svg>
 );
 
-export default function DiagramSlot({ type = 'right', label, filled = false, children }) {
+export default function DiagramSlot({ type = 'right', label, filled = false, imageUrl, children }) {
   const classNames = [
     'diagram-slot',
     type === 'full' ? 'diagram-slot--full' : '',
-    filled ? 'diagram-slot--filled' : '',
+    (filled || imageUrl || children) ? 'diagram-slot--filled' : '',
   ].filter(Boolean).join(' ');
 
   return (
     <div className={classNames} data-diagram-type={type}>
-      {children || (
+      {children || (imageUrl ? (
+        <img src={imageUrl} alt={label} className="diagram-slot__image" />
+      ) : (
         <>
           {placeholderIcon}
           <span className="diagram-slot__label">{label || 'Reserved for figure'}</span>
         </>
-      )}
+      ))}
     </div>
   );
 }

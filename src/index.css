@@ -84,20 +84,22 @@ body { font-family: var(--font-body); font-weight: 400; color: var(--high-contra
 .glass-card--subtle { background: rgba(17, 70, 67, 0.35); border-color: rgba(162, 181, 104, 0.10); box-shadow: 0 4px 18px rgba(0, 0, 0, 0.18); }
 
 /* ---- Diagram Placeholder ---- */
-.diagram-slot { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 200px; border: 1.5px dashed rgba(162, 181, 104, 0.22); border-radius: var(--radius-card); background: rgba(17, 70, 67, 0.15); position: relative; overflow: hidden; }
+.diagram-slot { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 200px; height: 100%; border: 1.5px dashed rgba(162, 181, 104, 0.22); border-radius: var(--radius-card); background: rgba(17, 70, 67, 0.15); position: relative; overflow: hidden; }
 .diagram-slot__label { font-family: var(--font-mono); font-size: 0.72rem; color: var(--muted-forest); text-transform: uppercase; letter-spacing: 0.12em; opacity: 0.55; text-align: center; padding: 12px 16px; }
 .diagram-slot__icon { width: 36px; height: 36px; margin-bottom: 10px; opacity: 0.2; }
 .diagram-slot--filled .diagram-slot__label, .diagram-slot--filled .diagram-slot__icon { display: none; }
 .diagram-slot--filled { border-style: solid; border-color: rgba(162, 181, 104, 0.12); background: transparent; }
 .diagram-slot img, .diagram-slot svg { max-width: 100%; max-height: 100%; object-fit: contain; }
-.diagram-slot--full { min-height: 280px; width: 100%; }
-.diagram-slot--strip { min-height: 120px; width: 100%; border-radius: var(--radius-sm); }
-.diagram-slot--inset { min-height: 140px; max-width: 280px; border-radius: var(--radius-sm); }
+.diagram-slot__image { position: absolute; inset: 0; display: block; width: 100%; height: 100%; object-fit: contain; }
+.diagram-slot--full .diagram-slot__image { object-fit: cover; }
+.diagram-slot--full { min-height: 280px; height: 100%; width: 100%; }
+.diagram-slot--strip { min-height: 120px; height: 100%; width: 100%; border-radius: var(--radius-sm); }
+.diagram-slot--inset { min-height: 140px; height: 100%; max-width: 280px; border-radius: var(--radius-sm); }
 
 /* =============== LAYOUT SYSTEM =============== */
 
 /* ---- Two Column ---- */
-.layout-two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: start; flex: 1; min-height: 0; }
+.layout-two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: stretch; flex: 1; min-height: 0; }
 .layout-two-col--text-diagram { grid-template-columns: 1.1fr 0.9fr; }
 .layout-two-col--wide-left { grid-template-columns: 1.4fr 0.6fr; }
 .layout-two-col--wide-right { grid-template-columns: 0.6fr 1.4fr; }
@@ -223,3 +225,54 @@ body { font-family: var(--font-body); font-weight: 400; color: var(--high-contra
 ::-webkit-scrollbar { width: 4px; }
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: rgba(162, 181, 104, 0.2); border-radius: 2px; }
+
+.print-view {
+  display: none;
+}
+
+/* =============== PRINT STYLES FOR EXPORT =============== */
+@media print {
+  /* Hide interactive view */
+  .presentation > *:not(.print-view) {
+    display: none !important;
+  }
+  
+  /* Show printable view */
+  .print-view {
+    display: block !important;
+    width: 100%;
+    background: var(--bg-deep);
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  
+  /* Make every slide exactly one page */
+  .print-slide {
+    height: 100vh;
+    width: 100vw;
+    page-break-after: always;
+    break-after: page;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .slide {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    animation: none !important;
+    transition: none !important;
+    height: 100% !important;
+    width: 100% !important;
+  }
+  
+  /* Disable all animations for print */
+  .fade-in {
+    opacity: 1 !important;
+    animation: none !important;
+    transform: none !important;
+  }
+}

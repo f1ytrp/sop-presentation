@@ -93,6 +93,15 @@ export default function Presentation({ slides }) {
 
       {/* Navigation hint */}
       <div className="nav-hint">← → / click to navigate</div>
+
+      {/* Hidden Print View */}
+      <div className="print-view">
+        {slides.map(s => (
+          <div key={s.id} className="print-slide">
+            <SlideRenderer slide={s} />
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

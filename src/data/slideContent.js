@@ -18,7 +18,7 @@ const slides = [
     title: 'From Genomic Dark Matter to Evolutionary Innovation',
     subtitle: 'Role of Non-coding DNA in Evolution',
     meta: 'Non-coding DNA · Gene Regulation · Phenotypic Diversity · Evolutionary Change',
-    diagram: { type: 'inline', label: 'Insert title artwork — DNA helix, root system, or branching genome visual' },
+    diagram: { type: 'inline', label: 'Insert title artwork — DNA helix, root system, or branching genome visual', imageUrl: '/assets/title_artwork.png' },
   },
 
   /* ===== 2. Why This Topic Matters — SPOTLIGHT ===== */
@@ -29,7 +29,7 @@ const slides = [
     statement: 'Only ~1.5% of the human genome encodes proteins — yet the rest is far from junk.',
     support: 'Non-coding DNA contains the regulatory information that controls gene activity across time and tissue. Its importance becomes clear when we ask how complex organisms arise from similar protein-coding gene sets. The central question is not just what genes exist, but how their expression is controlled.',
     callout: { icon: '🧬', text: 'This large non-coding portion was once dismissed as "junk," but that view is now outdated.' },
-    diagram: { type: 'strip', label: 'Insert genome composition graphic — coding vs non-coding proportions' },
+    diagram: { type: 'strip', label: 'Insert genome composition graphic — coding vs non-coding proportions', imageUrl: '/assets/genome_composition.png' },
   },
 
   /* ===== 3. What Is Non-coding DNA? — FEATURE GRID ===== */
@@ -103,7 +103,7 @@ const slides = [
       'Their sequence composition affects strength, precision, and responsiveness to signals.',
       'In this sense, promoters act as active control hubs rather than passive landing pads.',
     ],
-    diagram: { type: 'right', label: 'Insert gene track with promoter region highlighted' },
+    diagram: { type: 'right', label: 'Insert gene track with promoter region highlighted', imageUrl: '/assets/promoter_schematic.png' },
   },
 
   /* ===== 8. Core Promoter Architecture — STEPS ===== */
@@ -147,7 +147,7 @@ const slides = [
       'Dispersed promoters are common in housekeeping genes that need steady output.',
       'Promoter architecture is matched to biological role.',
     ],
-    diagram: { type: 'right', label: 'Insert side-by-side promoter start site comparison' },
+    diagram: { type: 'right', label: 'Insert side-by-side promoter start site comparison', imageUrl: '/assets/promoter_variants.png' },
   },
 
   /* ===== 11. Divergent Transcription — SPOTLIGHT ===== */
@@ -182,7 +182,7 @@ const slides = [
       'They act through chromatin looping that brings distal DNA into contact with promoters.',
       'Transcription factors and the Mediator complex help stabilize this long-range communication.',
     ],
-    diagram: { type: 'right', label: 'Insert enhancer-promoter looping diagram' },
+    diagram: { type: 'right', label: 'Insert enhancer-promoter looping diagram', imageUrl: '/assets/enhancer_looping.png' },
   },
 
   /* ===== 14. Enhancer Types — COMPARISON ===== */
@@ -234,7 +234,7 @@ const slides = [
       'They help keep inappropriate genes off in the wrong tissue or developmental stage.',
       'Silencers balance enhancer activity and preserve proper expression levels.',
     ],
-    diagram: { type: 'right', label: 'Insert repressor binding to DNA schematic' },
+    diagram: { type: 'right', label: 'Insert repressor binding to DNA schematic', imageUrl: '/assets/silencers_repressor.png' },
   },
 
   /* ===== 18. Insulators — TWO-COL ===== */
@@ -251,7 +251,7 @@ const slides = [
       'CTCF is a major insulator-binding protein involved in this boundary system.',
       'Insulators help preserve genome organization and regulatory fidelity.',
     ],
-    diagram: { type: 'right', label: 'Insert CTCF boundary / domain separation schematic' },
+    diagram: { type: 'right', label: 'Insert CTCF boundary / domain separation schematic', imageUrl: '/assets/insulators_ctcf.png' },
   },
 
   /* ===== 19. ncRNAs — SECTION ===== */
@@ -270,7 +270,7 @@ const slides = [
     sectionTag: 'ncRNAs',
     statement: 'RNA is not only a messenger — it can itself be a regulator of gene expression.',
     support: 'ncRNAs fine-tune expression at transcriptional and post-transcriptional levels. They add flexibility, specificity, and additional control layers to the genome. Different ncRNA classes act through different mechanisms, but all contribute to regulation.',
-    diagram: { type: 'full', label: 'Insert RNA regulatory network or layered control diagram' },
+    diagram: { type: 'full', label: 'Insert RNA regulatory network or layered control diagram', imageUrl: '/assets/ncrna_network.png' },
   },
 
   /* ===== 21. ncRNA Classes — COMPARISON ===== */
@@ -323,7 +323,7 @@ const slides = [
       'They make up a large fraction of the genome and create sequence variation.',
       'Their mobility makes them powerful agents of genomic change.',
     ],
-    diagram: { type: 'right', label: 'Insert mobile DNA element movement diagram' },
+    diagram: { type: 'right', label: 'Insert mobile DNA element movement diagram', imageUrl: '/assets/mobile_dna.png' },
   },
 
   /* ===== 25. Evolutionary Role of TEs — STEPS ===== */
@@ -354,7 +354,7 @@ const slides = [
       'Some can act as regulatory RNAs and influence their parent genes.',
       'They are genomic fossils that can still participate in regulation.',
     ],
-    diagram: { type: 'right', label: 'Insert pseudogene-to-parent gene regulatory schematic' },
+    diagram: { type: 'right', label: 'Insert pseudogene-to-parent gene regulatory schematic', imageUrl: '/assets/pseudogene_regulation.png' },
   },
 
   /* ===== 27. 3D Genome & Epigenetics — SECTION ===== */
@@ -426,7 +426,7 @@ const slides = [
       'Variation provides the raw material for evolutionary novelty.',
       'Evolution needs both stability and change.',
     ],
-    diagram: { type: 'right', label: 'Insert conserved vs variable sequence comparison' },
+    diagram: { type: 'right', label: 'Insert conserved vs variable sequence comparison', imageUrl: '/assets/conservation_variation.png' },
   },
 
   /* ===== 33. Why ncDNA Matters — SPOTLIGHT ===== */
@@ -451,7 +451,7 @@ const slides = [
       'This changes developmental timing, spatial control, and tissue specificity.',
       'Evolution works by rewiring gene control rather than only inventing new genes.',
     ],
-    diagram: { type: 'right', label: 'Insert network rewiring — before/after interaction map' },
+    diagram: { type: 'right', label: 'Insert network rewiring — before/after interaction map', imageUrl: '/assets/regulatory_rewiring.png' },
   },
 
   /* ===== 35. ENCODE — STATS ===== */
@@ -510,7 +510,7 @@ const slides = [
       'It is essential for modern genomics and medicine.',
       'Understanding it is central to understanding life itself.',
     ],
-    diagram: { type: 'full', label: 'Insert final thematic artwork — genome-tree / root system / evolutionary branch' },
+    diagram: { type: 'full', label: 'Insert final thematic artwork — genome-tree / root system / evolutionary branch', imageUrl: '/assets/conclusion_artwork.png' },
   },
 
   /* ===== 39. Thank You ===== */

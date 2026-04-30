@@ -21,8 +21,8 @@ export function TitleSlide({ data }) {
       <div className="title-slide__line fade-in fade-in-delay-3" />
       <p className="title-slide__subtitle fade-in fade-in-delay-3">{data.subtitle}</p>
       {data.diagram && (
-        <div className="fade-in fade-in-delay-4" style={{ width: '100%', maxWidth: 360, margin: '0 auto' }}>
-          <DiagramSlot type={data.diagram.type} label={data.diagram.label} />
+        <div className="fade-in fade-in-delay-4" style={{ width: '100%', height: '100%', maxWidth: 360, margin: '0 auto' }}>
+          <DiagramSlot type={data.diagram.type} label={data.diagram.label} imageUrl={data.diagram.imageUrl} />
         </div>
       )}
       {data.meta && <p className="title-slide__meta fade-in fade-in-delay-5">{data.meta}</p>}
@@ -55,8 +55,8 @@ export function SingleColumnSlide({ data }) {
           </div>
         </GlassCard>
         {data.diagram && (
-          <div className="fade-in fade-in-delay-3">
-            <DiagramSlot type={data.diagram.type} label={data.diagram.label} />
+          <div className="fade-in fade-in-delay-3" style={{ height: '100%' }}>
+            <DiagramSlot type={data.diagram.type} label={data.diagram.label} imageUrl={data.diagram.imageUrl} />
           </div>
         )}
       </div>
@@ -79,8 +79,8 @@ export function TwoColumnSlide({ data }) {
             <ul>{data.bullets && data.bullets.map((b, i) => <li key={i}>{b}</li>)}</ul>
           </div>
         </GlassCard>
-        <div className="fade-in fade-in-delay-3">
-          {data.diagram ? <DiagramSlot type={data.diagram.type} label={data.diagram.label} /> : <div />}
+        <div className="fade-in fade-in-delay-3" style={{ height: '100%' }}>
+          {data.diagram ? <DiagramSlot type={data.diagram.type} label={data.diagram.label} imageUrl={data.diagram.imageUrl} /> : <div style={{ height: '100%' }} />}
         </div>
       </div>
     </div>
@@ -149,8 +149,8 @@ export function SpotlightSlide({ data }) {
           </div>
         )}
         {data.diagram && (
-          <div className="fade-in fade-in-delay-4" style={{ width: '100%', maxWidth: 500 }}>
-            <DiagramSlot type={data.diagram.type} label={data.diagram.label} />
+          <div className="fade-in fade-in-delay-4" style={{ width: '100%', height: '100%', maxWidth: 500 }}>
+            <DiagramSlot type={data.diagram.type} label={data.diagram.label} imageUrl={data.diagram.imageUrl} />
           </div>
         )}
       </div>
@@ -232,9 +232,9 @@ export function SplitSlide({ data }) {
             </div>
           )}
         </div>
-        <div className="split-panel split-panel--accent fade-in fade-in-delay-3">
+        <div className="split-panel split-panel--accent fade-in fade-in-delay-3" style={{ height: '100%' }}>
           {data.diagram ? (
-            <DiagramSlot type={data.diagram.type} label={data.diagram.label} />
+            <DiagramSlot type={data.diagram.type} label={data.diagram.label} imageUrl={data.diagram.imageUrl} />
           ) : data.rightContent ? (
             <div className="slide-body">{data.rightContent}</div>
           ) : null}
