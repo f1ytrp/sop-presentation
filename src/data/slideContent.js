@@ -18,7 +18,7 @@ const slides = [
     title: 'From Genomic Dark Matter to Evolutionary Innovation',
     subtitle: 'Role of Non-coding DNA in Evolution',
     meta: 'Aaditya Nair · Muskan Vikas Bhagotra | Molecular Biology & Genomics',
-    diagram: { type: 'inline', label: 'Title Artwork: DNA Helix', imageUrl: '/assets/title_artwork.png' },
+    diagram: { type: 'inline', label: 'Title Artwork: DNA Helix', imageUrl: './assets/title_artwork.png' },
   },
 
   /* ===== 2. Why This Topic Matters — SPOTLIGHT ===== */
@@ -29,7 +29,7 @@ const slides = [
     statement: '98% of the human genome is non-coding DNA — once dismissed as "junk," now understood as the control architecture of life.',
     support: 'Non-coding DNA contains the regulatory information that controls gene activity across time and tissue. According to ENCODE, ~80% of the genome shows biochemical activity. The central question is not just what genes exist, but how their expression is controlled.',
     callout: { icon: '🧬', text: 'Small regulatory shifts in non-coding DNA drive large phenotypic effects and evolutionary innovation.' },
-    diagram: { type: 'strip', label: 'Genome Composition: Coding vs Non-coding', imageUrl: '/assets/genome_composition.png' },
+    diagram: { type: 'strip', label: 'Genome Composition: Coding vs Non-coding', imageUrl: './assets/genome_composition.png' },
   },
 
   /* ===== 3. What Is Non-coding DNA? — FEATURE GRID ===== */
@@ -103,7 +103,7 @@ const slides = [
       'They control transcription bursting, pausing, and overall efficiency.',
       'Promoter architecture encodes regulatory logic that defines complete developmental programs.',
     ],
-    diagram: { type: 'right', label: 'Promoter Schematic & Pre-Initiation Complex', imageUrl: '/assets/promoter_schematic.png' },
+    diagram: { type: 'right', label: 'Promoter Schematic & Pre-Initiation Complex', imageUrl: './assets/promoter_schematic.png' },
   },
 
   /* ===== 8. Core Promoter Architecture — STEPS ===== */
@@ -147,7 +147,7 @@ const slides = [
       'Dispersed promoters are common in housekeeping genes requiring steady output and often overlap with CpG islands.',
       'Vertebrate genomes heavily feature dispersed promoters to provide flexible initiation platforms.',
     ],
-    diagram: { type: 'right', label: 'Focused vs Dispersed Promoters', imageUrl: '/assets/promoter_variants.png' },
+    diagram: { type: 'right', label: 'Focused vs Dispersed Promoters', imageUrl: './assets/promoter_variants.png' },
   },
 
   /* ===== 11. Divergent Transcription — SPOTLIGHT ===== */
@@ -182,7 +182,7 @@ const slides = [
       'They act through 3D chromatin looping that brings the distal DNA into contact with target promoters.',
       'Transcription factors, Cohesin, and the Mediator complex stabilize this loop and recruit RNA Pol II.',
     ],
-    diagram: { type: 'right', label: 'Enhancer-Promoter Looping', imageUrl: '/assets/enhancer_looping.png' },
+    diagram: { type: 'right', label: 'Enhancer-Promoter Looping', imageUrl: './assets/enhancer_looping.png' },
   },
 
   /* ===== 14. Enhancer Types — COMPARISON ===== */
@@ -235,7 +235,7 @@ const slides = [
       'They ensure tissue-specific silencing of inappropriate genes and maintain boundaries of silent chromatin.',
       'Defects in silencer elements are linked to severe developmental disorders and cancer.',
     ],
-    diagram: { type: 'right', label: 'Silencer Repression Complex', imageUrl: '/assets/silencers_repressor.png' },
+    diagram: { type: 'right', label: 'Silencer Repression Complex', imageUrl: './assets/silencers_repressor.png' },
   },
 
   /* ===== 18. Insulators — TWO-COL ===== */
@@ -252,7 +252,7 @@ const slides = [
       'CTCF and Cohesin are the primary vertebrate proteins that bind and stabilize these loop boundaries.',
       'Disruption of CTCF sites breaks TAD boundaries, frequently causing limb malformations and cancer.',
     ],
-    diagram: { type: 'right', label: 'CTCF Boundaries & TADs', imageUrl: '/assets/insulators_ctcf.png' },
+    diagram: { type: 'right', label: 'CTCF Boundaries & TADs', imageUrl: './assets/insulators_ctcf.png' },
   },
 
   /* ===== 19. ncRNAs — SECTION ===== */
@@ -271,7 +271,7 @@ const slides = [
     sectionTag: 'ncRNAs',
     statement: 'RNA is not only a messenger — it can itself be a regulator of gene expression.',
     support: 'ncRNAs fine-tune expression at transcriptional and post-transcriptional levels. They range from highly conserved small RNAs (miRNA) to less conserved long RNAs (lncRNA) with complex 3D structures. Different ncRNA classes act through different mechanisms to add flexibility, specificity, and layered control to the genome.',
-    diagram: { type: 'full', label: 'ncRNA Regulatory Network', imageUrl: '/assets/ncrna_network.png' },
+    diagram: { type: 'full', label: 'ncRNA Regulatory Network', imageUrl: './assets/ncrna_network.png' },
   },
 
   /* ===== 21. ncRNA Classes — COMPARISON ===== */
@@ -324,7 +324,7 @@ const slides = [
       'Historically dismissed as "jumping genes," they are now recognized as obligate genomic symbionts.',
       'They carry regulatory sequences and distribute transcription factor binding sites across the genome.',
     ],
-    diagram: { type: 'right', label: 'Mobile DNA Elements', imageUrl: '/assets/mobile_dna.png' },
+    diagram: { type: 'right', label: 'Mobile DNA Elements', imageUrl: './assets/mobile_dna.png' },
   },
 
   /* ===== 25. Evolutionary Role of TEs — STEPS ===== */
@@ -355,7 +355,7 @@ const slides = [
       'Some can act as regulatory RNAs and influence their parent genes.',
       'They are genomic fossils that can still participate in regulation.',
     ],
-    diagram: { type: 'right', label: 'Pseudogene Regulation', imageUrl: '/assets/pseudogene_regulation.png' },
+    diagram: { type: 'right', label: 'Pseudogene Regulation', imageUrl: './assets/pseudogene_regulation.png' },
   },
 
   /* ===== 27. 3D Genome & Epigenetics — SECTION ===== */
@@ -427,7 +427,7 @@ const slides = [
       'Variation in regulatory sequences explains much of the phenotypic diversity between closely related species.',
       'The regulatory non-coding genome evolves much faster than the protein-coding genome.',
     ],
-    diagram: { type: 'right', label: 'Sequence Conservation vs Variation', imageUrl: '/assets/conservation_variation.png' },
+    diagram: { type: 'right', label: 'Sequence Conservation vs Variation', imageUrl: './assets/conservation_variation.png' },
   },
 
   /* ===== 33. Why ncDNA Matters — SPOTLIGHT ===== */
@@ -452,7 +452,7 @@ const slides = [
       'Small non-coding mutations can shift developmental timing (heterochrony) with dramatic phenotypic effects.',
       'Regulatory mutations tune expression without disrupting the core protein machinery, making them highly "evolvable."',
     ],
-    diagram: { type: 'right', label: 'Network Rewiring Map', imageUrl: '/assets/regulatory_rewiring.png' },
+    diagram: { type: 'right', label: 'Network Rewiring Map', imageUrl: './assets/regulatory_rewiring.png' },
   },
 
   /* ===== 35. ENCODE — STATS ===== */
@@ -511,7 +511,7 @@ const slides = [
       'ncRNAs and transposable elements add dynamic regulatory innovation.',
       'Regulatory change drives phenotypic diversity and evolutionary adaptation.',
     ],
-    diagram: { type: 'full', label: 'Evolutionary Branch Artwork', imageUrl: '/assets/conclusion_artwork.png' },
+    diagram: { type: 'full', label: 'Evolutionary Branch Artwork', imageUrl: './assets/conclusion_artwork.png' },
   },
 
   /* ===== 39. Thank You ===== */
